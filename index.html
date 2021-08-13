@@ -1,0 +1,160 @@
+<html>
+<head>
+<title>Eventos</title>
+
+<!-- External libraries -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Template stuff -->
+<link rel="stylesheet" href="styles.css">
+<script src="main.js"></script>
+
+<!-- Template for the main menu / categories -->
+<script id="menu-template" type="text/x-handlebars-template">
+	<nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm mb-4 container" style="background-color: transparent">
+		<a class="navbar-brand" href="https://nomadedigitalbrazil.com" onclick="showAllProducts();"><img class="logo" src="logob.png" alt=""></a>
+
+		<a href="x" class="btn navbar-toggler " type="button" data-target="#navbarNav" style="font-size: 14px;">Área Privada</a>
+
+
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<!--
+			<ul class="navbar-nav">
+				{{#each this as |category|}}
+					<li class="nav-item">
+						<a class="nav-link" href="#" onclick="showCategory('{{category.name}}');">{{category.name}}</a>
+					</li>
+				{{/each}}
+			</ul> -->
+
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+					<a href="x" class="btn" style="font-size: 14px;">Área Privada</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+</script>
+
+<!-- Template for the products -->
+<script id="products-template" type="text/x-handlebars-template">
+	<h3 >{{title}}</h3>
+	<p>Participe de nossas expriências e imersões junto com uma comunidade inteira de pessoas incriveis!</p>
+	<div class="shadow-sm bg-white rounded-lg">
+		{{#each this.products as |product|}}
+			<div class="media border-bottom p-3" id="product-{{product.id}}">
+				<!--<img src="{{product.iconUrl}}" width="80" class="mr-3"> -->
+				<div class="media-body">
+					<h6 class="m-0">
+						<p class="m-0 text-muted" style="margin-bottom: 10px;"><small>{{product.category}}</small></p>
+						<a class="nome" href="{{product.website}}" target="_blank">{{product.name}}</a>
+					</h6>
+					<p class="m-0">{{product.shortDescription}}</p>
+					<p class="m-0"><b>{{product.bonus}}</b></p>
+				</div>
+			<!--<button class="btn btn-outline-primary" onclick="upvoteProduct({{product.id}});" {{#if product.hasVoted}}disabled{{/if}}>
+					&#x21e7; {{product.votes}}</button> -->
+			</div>
+		{{/each}}
+		{{#unless this.products}}
+			<p class="p-5 text-center text-muted">Nenhum produto encontrado!</p>
+		{{/unless}}
+	</div>
+</script>
+</head>
+
+<body>
+	
+	<div class="bg">
+	<div class id="menu-container"></div>
+	<div class="container space-top-3 space-bottom-lg-3" style="padding-bottom: 100px;">
+        <div class="row justify-content-lg-between align-items-lg-center pt-lg-5">
+
+          <div class="col-lg-6" style="margin-bottom: 30px;">
+            <div class="">
+			<p class="" style="color: #fff; font-size: 20px !important; margin-top: 30px;">#vivadoseujeito</p>
+              <h1 class="display-4" style=" color: #fff !important; font-weight: 700; font-size: 3rem !important; line-height: 95% !important;" >Trabalhe e curta a vida na mesma medida!</h1>
+			  <p style="font-size: 16px !important; color: #fff;">Junte-se a primeira comunidade exclusiva para Nomades Digitais Brasileiros. Trabalhe e curta a vida na mesma medida! Conquiste um estilo de vida com baixa carga de estresse e mais saúde e bem-estar.</p>
+			  <a href="https://google.com"><button type="button" class="submit-button"> Eu quero ser Nomade Digital</button></a>
+			  <!--<p class="lead" style="font-weight: 400; color: #fff;">Conquiste um estilo de vida com baixa carga de estresse tenha mais saúde e bem-estar. Descubra como libertar-se do mercado e modelo de trabalho tradicional, comece trabalhar e ganhar dinheiro pela internet empreendendo e podendo viajar o quanto desejar fazendo o que ama com planejamento e segurança financeira.</p>-->
+            </div>
+          </div>
+		  <!-- <div class="col-lg-6 oculta" style="text-align: center;">
+				<img class="mb-25" style="max-width: 100%; max-height: 450px;" src="safe_image 1.png" alt="">
+			</div>-->
+        </div>
+      </div>
+	</div>
+</div>
+
+
+	<div class="" style="background-color:black !important; padding-top: 50px; padding-bottom: 50px;">
+	  	<div class="container">
+		<div class="row">
+			<div class="col-lg-4">
+				<h3 style="color: #fff;">Networking</h3>
+				<p style="color: #fff;">Junte-se a comunidade de nômades digitais brasileiros e faça Networking de qualidade com empreendedores lifestyle.</p>
+			</div>
+
+			<div class="col-lg-4">
+				<h3 style="color: #fff;" >Metodologia</h3>
+				<p style="color: #fff;">Eu quero ser Nomade DigitalEu quero ser Nomade Digital Eu quero ser Nomade Digital Eu quero ser Nomade Digital</p>
+			</div>
+
+			<div class="col-lg-4">
+				<h3 style="color: #fff;">Recursos</h3>
+				<p style="color: #fff;">Eu quero ser Nomade DigitalEu quero ser Nomade Digital Eu quero ser Nomade Digital Eu quero ser Nomade Digital</p>
+			</div>
+		</div>
+		</div>
+	</div>
+
+
+
+	<div class="container">
+	<div class="row">
+
+		<div class="col-lg-5" style="padding-top: 50px !important; padding-bottom: 50px !important;">
+			<img src="safe_image 1.png" style="max-width: 100%;" alt="">
+		</div>
+
+		<div class="col-lg-7" style="padding-top: 50px !important; padding-bottom: 50px !important;">
+			<h3>Que tipo de vida você quer ter?</h3>
+			<p style="font-size: 20px !important; font-weight: 700;">"O mas dificil em iniciar é começar!"</p>
+			<p>Jornadas inflexíveis, metas pré-estabelecidas, remunerações fixas e dificuldade de conquistar novas posições são alguns dos fatores que têm feito muita gente correr atrás de alternativas e fugir aos poucos ou muito rápido desse modelo de trabalho tradicional de carteira assinada apelidado de “7 às 7”, que consome pelo menos de 8 a 12 horas do seu dia não te sobrando nada além de cansaço, estresse e uma noite curta entre tarefas pessoais e o descanso para começar outro dia e tudo se repetir de novo, causando um desprazer imenso mesmo se você trabalha com o que ama é impossível se manter motivado.<br><br>Os finais de semana são como torturas, pois você sabe que essa alegria não vai durar muito pois acaba no momento em que toca a vinheta do Fantástico!<br><br>Com o avanço tecnológico, esse movimento foi tomando forma a partir da evolução dos dispositivos móveis e do acesso às conexões wireless. Some-se a isso a popularização das viagens de longa distância e os efeitos da globalização Usamos a tecnologias de foma flexivel para conquistar liberdade de escolha, mobilidade, e realização pessoal e profissional.</p>
+		</div>
+
+		<div class="col-lg-7">
+			<div style="background-color: #fff !important;">
+				<div class="" id="products-container" style="background-color: #fff !important; padding-top: 50px !important; padding-bottom: 50px !important;">
+					<!-- Loading indicator: this gets replaced when we have products -->
+					<div class="text-center p-5 m-5">
+						<div class="text-muted p-2">Aguarde um momento...</div>
+						<div class="spinner-border text-primary" role="status"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-lg-5" style="padding-top: 50px !important; padding-bottom: 10px !important;">
+			<img src="safe_image 1.png" style="max-width: 100%;" alt="">
+		</div>
+
+	</div>
+	</div>
+
+
+
+	<div class="" id="footer" style="background-color: black;">
+		<div class=" text-center p-3" style="color: #fff !important; font-size: 11px !important;">Feito com ❤️ por<a href="https://nomadedigitalbrazil.com" style="color: #fff !important;"> Nomade Digital Brazil</a> | Todos os direitos reservados 2021.</div>
+	</div>
+
+
+	<a href="https://instagram.com/nomadedigitalbrazil" target="”_blank&quot;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1024px-Instagram_icon.png" style="height:55px; position:fixed; bottom: 25px; right: 25px; z-index:99999; border-radius: 1000px !important;" data-selector="img"></a>
+
+</body>
+</html>
