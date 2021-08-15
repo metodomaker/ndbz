@@ -48,7 +48,7 @@ function drawCategories() {
 }
 
 function showAllProducts() {
-	this.title = "Agenda/Eventos";
+	this.title = "Agenda";
 	drawProducts(this.products);
 }
 
