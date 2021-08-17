@@ -4,6 +4,8 @@
 
 <!-- External libraries -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
@@ -44,8 +46,8 @@
 
 <!-- Template for the products -->
 <script id="products-template" type="text/x-handlebars-template">
-	<h3 >{{title}}</h3>
-	<p>Participe de nossas expriências e imersões junto com uma comunidade inteira de pessoas incriveis!</p>
+	<h3 style="color: black !important;">{{title}}</h3>
+	<p style="color: black !important;">Participe de nossas expriências e imersões junto com uma comunidade inteira de pessoas incriveis!</p>
 	<div class="shadow-sm bg-white rounded-lg">
 		{{#each this.products as |product|}}
 			<div class="media border-bottom p-2" id="product-{{product.id}}">
@@ -83,13 +85,14 @@
 		  <div class="col-lg-6">
 			<p style="color: #fff; font-size: 20px !important; font-weight: 900;">#vivadoseujeito</p>
 			<h1 class="display-5" style=" color: #fff !important; font-weight: 700;" >Torne-se Nomade Digital</h1>
-			<p style="color: #fff; font-size: 16px !important; margin-bottom: 20px !important;">Trabalhe e curta a vida na mesma intensidade e medida, tenha mais saúde e bem-estar com uma rotina de baixo estresse, fazendo o que ama e ganhando dinheiro pela internet enquanto viajando pelo mundo quando e quanto desejar sem um endereço fixo.</p>
+			<p style="color:#fff; font-size: 17px !important; margin-bottom: 10px !important;">Trabalhe e curta a vida na mesma intensidade e medida, tenha mais saúde e bem-estar com uma rotina de baixa carga de estresse sendo livre para fazer o que ama viajando pelo mundo. Sem abrir mão de planejamento, estabilidade e segurança financeira.</p>
+			<!--<p style="color: #fff; font-size: 16px !important; margin-bottom: 10px !important;">Ser nomade digital não é apenas uma aventura, é um estilo de vida sério e descontraido. Tenha mais saúde e bem-estar com uma rotina de baixa carga de estresse, sendo livre para fazer o que ama viajando pelo mundo quando e quanto desejar sem endereço fixo, sem abrir mão de planejamento, estabilidade e segurança financeira.</p>-->
 			<form action="https://hook.integromat.com/2xe7b1gdaknger5t3sswywzmljk1geej" method="POST" style="color: #000 !important;">
 				<input type="hidden" id="redirect" name="phone_number[full]" value="">
 				<input type="hidden" name="nationalMode" value="">
 				<input id="phone" name="number" type="tel" required>
 				<button type="submit" style="background-color: #25D366 !important;"><b>BORA!</b></button>
-				<p style="font-size: 10px !important; color: #fff; margin-top: 10px;">Ao inscrever-se você vai ser adicionado(a) ao nosso grupo do Whatsapp<br>automaticamente e vai receber uma mensagem com instruções para<br>participar de nossas iniciativas. Nós não fazemos e somos contra spam.</p>
+				<p style="font-size: 8px !important; color: #fff; margin-top: 5px;">Ao inscrever-se você será adicionado(a) ao nosso grupo do Whatsapp automaticamente<br>e vai receber instruções para participar de nossas iniciativas. Nós não fazemos spam.</p>
 			  </form>
 		  </div>
 
@@ -98,25 +101,24 @@
   	</div>
 
 
-
-	<div class="" style="background-color:black !important; padding-top: 30px; padding-bottom: 30px;">
+	<div class="" style="background-color:black !important; padding-top: 30px; padding-bottom: 60px;">
 	  	<div class="container">
 		<div class="row">
 			<div class="col-lg-4">
 				<h3 style="color: #fff; margin-top: 20px; font-weight: 700;">Networking</h3>
-				<p style="color: #fff;">Crie conexões e oportunidades de qualidade com nossa rede de empreendedores lifestyle, conheça pessoas incríveis, motivadas e criativas que estão iniciando, avançando ou no mesmo momento de vida que você, passe para o próximo nível agora, networking vale mais que dinheiro!</p>
+				<p style="color: #fff;">Crie conexões e oportunidades de qualidade com nossa rede de empreendedores lifestyle, conheça novas pessoas incríveis, motivadas, dedicadas e criativas que estão iniciando, avançando ou no mesmo momento de vida que você, passe para o próximo nível agora, junte-se ao grupo seleto e exclusivo de brasileiros ousados e inconformados que estão fazendo acontecer, inovando e adaptando-se a nova realidade, networking vale mais que dinheiro!</p>
 			</div>
 
 			<div class="col-lg-4">
 				<h3 style="color: #fff; margin-top: 20px; font-weight: 700;" >Conhecimento</h3>
-				<p style="color: #fff;">Invista em você mesmo, curamos e centralizamos informações de alto valor agregado com foco em empreendedorismo, fontes de renda e negócios digitais, planejamento de vida e financeiro de curto, médio e longo prazo, para fazeremos o que amamos com estabilidade e segurança todos os dias.</p>
+				<p style="color: #fff;">Invista em você, curamos e centralizamos conteúdos, informações heurísticas de alto valor agregado em uma base privada para nossos membros, com foco em empreendedorismo, fontes de renda ativas, extra e passivas, estratégias de negócios digitais semi ou 100% automatizados, planejamento de vida e financeiro de curto, médio e longo prazo, para fazermos o que amamos viajando com estabilidade, segurança e economia todos os dias.</p>
 
 			</div>
 
 			<div class="col-lg-4">
 				<h3 style="color: #fff; margin-top: 20px; font-weight: 700;">Recursos</h3>
-				<p style="color: #fff;">Descubra ferramentas, recursos e novas tecnologias que são como super poderes para empreendedores lifestyle que viaja pelo mundo sem um endereço fixo e trabalha ao mesmo tempo pela internet.</p>
-				<a href="https://ferramentas.nomadedigitalbrazil.com" class="btn navbar-toggler " type="button" data-target="#navbarNav" style="font-size: 14px; border: solid 1px; border-color: #fff; margin-bottom: 30px; margin-top: 15px !important;">⭐️ Lista de ferramentas</a>
+				<p style="color: #fff;">Descubra ferramentas, recursos e novas tecnologias que são como super poderes para empreendedores lifestyle que viajam pelo mundo sem um endereço fixo e trabalham ao mesmo tempo pela internet e precisam de meios para simplificar inúmeras atividades para dias atípicos. Fazemos parcerias com produtores de ferramentas e recursos para gerar benefícios, descontos e economia para nossos membros.</p>
+				<a href="https://ferramentas.nomadedigitalbrazil.com" class="btn navbar-toggler " type="button" data-target="#navbarNav" style="font-size: 16px; border: solid 1px; border-color: #25D366; margin-bottom: 30px; margin-top: 15px !important; background-color: #25D366 !important; padding: 10px;"> ⭐️ Lista de ferramentas grátis </a>
 			</div>
 		</div>
 		</div>
@@ -127,43 +129,116 @@
 	<div class="container">
 	<div class="row">
 
-		<div class="col-lg-6">
-			<div class="video-sobre" style="text-align: center;">
-				<iframe width="560" height="315" 
-				src="https://www.youtube.com/embed/Kpv4w_vX8fI" frameborder="0" 
-				allow="accelerometer; autoplay; encrypted-media;
-				gyroscope; picture-in-picture" allowfullscreen>[
-				</iframe>
+	<div class="col-lg-7">
+		<div style="background-color: #fff !important;">
+			<div class="" id="products-container" style="background-color: #fff !important; padding-top: 50px !important; padding-bottom: 50px !important;">
+				<!-- Loading indicator: this gets replaced when we have products -->
+				<div class="text-center p-5 m-5">
+					<div class="text-muted p-2">Aguarde um momento...</div>
+					<div class="spinner-border text-primary" role="status"></div>
+				</div>
 			</div>
-			<h3>Que tipo de vida você quer ter?</h3>
-			
-			 <p style="margin-bottom: 20px !important;">Jornadas inflexíveis, metas pré-estabelecidas, remunerações fixas e dificuldade de conquistar novas posições são alguns dos fatores que têm feito muita gente correr atrás de alternativas e fugir aos poucos ou muito rápido do modelo de trabalho tradicional de carteira assinada apelidado de “7 às 7”.</p>
-			<p style="margin-top: 20px;">Modelo de trabalho que consome pelo menos de 8 a 12 horas do seu dia não te sobrando nada além de cansaço, estresse e uma noite curta entre tarefas pessoais e o descanso para ter que começar outro dia e tudo se repetir de novo. É perturbador imaginar que muitas pessoas nascem, crescem e morrem tendo um vida pequena e mediocre. Um tipo de vida que causa um desprazer imenso mesmo se você trabalha com o que ama é impossível se manter motivado. Os finais de semana são como torturas, pois você sabe que essa alegria não vai durar muito pois acaba no momento em que toca a vinheta do Fantástico! Mas com o avanço tecnológico e as possibilidades que foram criadas, o movimento nômade digital, um estilo de viva que prega liberdade geográfica e mais saúde e bem-estar foi tomando forma a partir da evolução dos dispositivos móveis e do acesso às conexões wireless. Some a isso a popularização das viagens de longa distância e os efeitos da globalização. Passamos a usar as novas tecnologias de forma flexível para conquistar liberdade de escolha, mobilidade, e realização pessoal e profissional e viver uma rotina de baixa carga de estresse. O estresse tem desencadeado inúmeros tipos de doenças psicológicas e sociais, encontramos nesse estilo de vida uma forma de ter uma vida melhor.</p>
-		
-		  </div>
+		</div>
+	</div>
 
+	<div class="col-lg-5" style="background-color: #fff !important; margin-top: 50px !important; padding-top: 20px !important; text-align: center; border-radius: 10px; margin-bottom: 100px !important;">
+			<h3 style="color: #000;">Que tipo de vida você quer ter?</h3>
+			<p style="color: #000;">Jornadas inflexíveis, metas pré-estabelecidas, remunerações fixas e dificuldade de conquistar novas posições são alguns dos fatores que têm feito muita gente correr atrás de alternativas e fugir aos poucos ou muito rápido do modelo de trabalho tradicional de carteira assinada apelidado de “7 às 7”. Modelo de trabalho que consome pelo menos de 8 a 12 horas do seu dia não te sobrando nada além de cansaço, estresse e uma noite curta entre tarefas pessoais e o descanso para ter que começar outro dia e tudo se repetir de novo.</p><br>
+			<p style="color: #000;">É perturbador imaginar que muitas pessoas nascem, crescem e morrem tendo um vida pequena e mediocre. Um tipo de vida que causa um desprazer imenso mesmo se você trabalha com o que ama é impossível se manter motivado. Os finais de semana são como torturas, pois você sabe que essa alegria não vai durar muito pois acaba no momento em que toca a vinheta do Fantástico! Mas com o avanço tecnológico e as possibilidades que foram criadas, o movimento nômade digital, um estilo de viva que prega liberdade geográfica e mais saúde e bem-estar foi tomando forma a partir da evolução dos dispositivos móveis e do acesso às conexões wireless. </p><br>
+			<p style="color: #000;">a isso a popularização das viagens de longa distância e os efeitos da globalização. Passamos a usar as novas tecnologias de forma flexível para conquistar liberdade de escolha, mobilidade, e realização pessoal e profissional e viver uma rotina de baixa carga de estresse. O estresse tem desencadeado inúmeros tipos de doenças psicológicas e sociais, encontramos nesse estilo de vida uma forma de ter uma vida melhor.</p>
+	</div>
 
-		
+	</div>
+</div>
 
-		<div class="col-lg-6">
-			<div style="background-color: #fff !important;">
-				<div class="" id="products-container" style="background-color: #fff !important; padding-top: 50px !important; padding-bottom: 50px !important;">
-					<!-- Loading indicator: this gets replaced when we have products -->
-					<div class="text-center p-5 m-5">
-						<div class="text-muted p-2">Aguarde um momento...</div>
-						<div class="spinner-border text-primary" role="status"></div>
+	<div style="background-color: #000; padding-top: 100px !important; padding-bottom: 100px !important;">
+		<div class="container">
+			<div class="row"></div>
+				<div class="col-lg-12">
+					<div class="video-sobre" style="text-align: center;">
+						<iframe width="100%" height="auto" 
+						src="https://www.youtube.com/embed/Kpv4w_vX8fI" frameborder="0" 
+						allow="accelerometer; autoplay; encrypted-media;
+						gyroscope; picture-in-picture" allowfullscreen>[
+						</iframe>
 					</div>
 				</div>
 			</div>
 		</div>
-
-
 	</div>
+
+
+	<div class="container" style="padding-bottom: 100px !important; padding-top: 100px !important;">
+		<div class="row">
+			<div class="col-lg-1"></div>
+			<div class="col-lg-10">
+
+				<div class="accordion" id="accordionExample">
+					<div class="accordion-item">
+					  <h2 class="accordion-header" id="headingOne">
+						<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+						  Accordion Item #1
+						</button>
+					  </h2>
+					  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+						<div class="accordion-body">
+						  <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+						</div>
+					  </div>
+					</div>
+					<div class="accordion-item">
+					  <h2 class="accordion-header" id="headingTwo">
+						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+						  Accordion Item #2
+						</button>
+					  </h2>
+					  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+						<div class="accordion-body">
+						  <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+						</div>
+					  </div>
+					</div>
+					<div class="accordion-item">
+					  <h2 class="accordion-header" id="headingThree">
+						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+						  Accordion Item #3
+						</button>
+					  </h2>
+					  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+						<div class="accordion-body">
+						  <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+						</div>
+					  </div>
+					</div>
+				  </div>
+			
+
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<div style="background-color: #000; padding-top: 100px !important; padding-bottom: 100px !important;">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-9" style="">
+					<p class="text-center" style="color: #fff; padding: 0px !important; margin: 0px !important; font-size: 18px !important; margin-bottom: 30px !important;" >Interessado em se tornar um parceiro do Clube? Nós queremos ouvir de você!</p>
+				</div>
+				<div class="col-lg-3 text-center" style="">
+					<a href="https://comunidadenomadedigitalbrazil.club.hotmart.com/login" class="btn navbar-toggler text-center" type="button" data-target="#navbarNav" style="font-size: 18px; color: #fff; font-weight: 500; border:solid 2px !important; border-color:#fff !important; padding: 10px;">Entrar em contato</a>
+				</div>
+			</div>
+		</div>
 	</div>
 
 
 
 	<div class="" id="footer" style="background-color: black;">
+		<div class="container">
+			<p class="text-center" style="font-size: 10px !important; color: #fff !important; margin-bottom: 30px !important; padding-top: 50px !important;">Os produtos e serviços vendidos neste site não representam nenhum tipo de parceria ou vínculo com o Facebook, Instagram, Whatsapp ou qualquer um de seus produtos e aplicativos. E também não são uma promessa ou garantia de ganhos ou resultados futuros. Seu nível de sucesso em alcançar os resultados com uso dos produtos, informações, estratégias ou recomendações depende do tempo que você dedica aos estudos, do seu entendimento e interpretação das ideias apresentadas, das técnicas serem corretamente utilizadas, de suas finanças, de seus conhecimentos e habilidades específicas. Por isso não podemos garantir o seu sucesso ou nível de renda, não somos responsáveis por suas ações.</p>
+		</div>
 		<div class=" text-center p-3" style="color: #fff !important; font-size: 11px !important;">Feito com ❤️ por<a href="https://nomadedigitalbrazil.com" style="color: #fff !important;"> Nomade Digital Brazil</a> | Todos os direitos reservados 2021.</div>
 	</div>
 
@@ -196,6 +271,9 @@
 		utilsScript: "build/js/utils.js",
 	  });
 	</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
 
 </body>
 </html>
