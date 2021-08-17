@@ -138,3 +138,21 @@ background-color:#fff !important;
 body{
   margin: 0px !important;
 }
+
+.accordion-button:not(.collapsed) {
+color: #000 !important;
+background-color: #fff !important;
+box-shadow: none !important;
+}
+
+button:hover {
+  background-color: #fff !important;
+  border-color: none !important;
+  cursor: pointer;
+}
+
+.accordion-button{
+  padding-top: 2rem !important;
+  padding-bottom: 2rem !important;
+  font-size: 18px !important;
+}
