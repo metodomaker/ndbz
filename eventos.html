@@ -1,0 +1,164 @@
+<html>
+<head>
+<title>Eventos</title>
+
+<!-- External libraries -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Template stuff -->
+<link rel="stylesheet" href="styles.css">
+<script src="main.js"></script>
+<link rel="stylesheet" href="build/css/intlTelInput.css">
+<link rel="stylesheet" href="build/css/demo.css">
+
+<!-- Template for the main menu / categories -->
+<script id="menu-template" type="text/x-handlebars-template">
+	<nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm mb-4" style="background-color: transparent;">
+		<a class="navbar-brand" href="https://nomadedigitalbrazil.com" onclick="showAllProducts();"><img class="logo" src="logob.png" alt=""></a>
+
+		<a href="https://comunidadenomadedigitalbrazil.club.hotmart.com/login" class="btn navbar-toggler " type="button" data-target="#navbarNav" style="font-size: 14px;">Área Privada</a>
+
+
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<!--
+			<ul class="navbar-nav">
+				{{#each this as |category|}}
+					<li class="nav-item">
+						<a class="nav-link" href="#" onclick="showCategory('{{category.name}}');">{{category.name}}</a>
+					</li>
+				{{/each}}
+			</ul> -->
+
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+					<a href="https://comunidadenomadedigitalbrazil.club.hotmart.com/login" class="btn" style="font-size: 14px;">Área Privada</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+</script>
+
+<!-- Template for the products -->
+<script id="products-template" type="text/x-handlebars-template">
+	<h3 style="color: black !important;">{{title}}</h3>
+	<p style="color: black !important;">Participe de nossas expriências e imersões junto com uma comunidade inteira de pessoas incriveis!</p>
+	<div class="shadow-sm bg-white rounded-lg">
+		{{#each this.products as |product|}}
+			<div class="media border-bottom p-2" id="product-{{product.id}}">
+				<p width="50" class="mr-3" style="font-size: 25px !important; text-align: center; font-weight: 700;"><span style="font-size: 15px !important; color: #F6574F; font-weight: 700; margin-bottom: 0% !important; padding-bottom: 0% !important;">{{product.mes}}</span><br>{{product.dia}}<br><span style="font-size: 12px; color: rgb(61, 61, 61);"></span></p>
+				<div class="media-body">
+					<h6 class="m-0">
+					<p class=" text-muted" style="margin-bottom: 0px !important; color: #00B779;"><small style="color: #00B779;">{{product.$}} {{product.local}} {{product.hora}} {{product.periodo}}</small></p>
+						<a class="nome" href="{{product.website}}" target="_blank">{{product.name}}</a>
+					</h6>
+				<p class="m-0">{{product.shortDescription}}</p>
+				<!--	<p class="m-0" style="font-size: 16px !important;">{{product.bonus}}</p>-->
+				</div>
+			<!--<button class="btn btn-outline-primary" onclick="upvoteProduct({{product.id}});" {{#if product.hasVoted}}disabled{{/if}}>
+					&#x21e7; {{product.votes}}</button> -->
+			</div>
+		{{/each}}
+		{{#unless this.products}}
+			<p class="p-5 text-center text-muted">Nenhum produto encontrado!</p>
+		{{/unless}}
+	</div>
+</script>
+</head>
+
+<body>
+
+
+<div class="bg2">
+		<div class="container" style="padding-bottom: 50px; padding-top: 50px;">
+	 		 <div class="row">
+		  
+		<div class="col-lg-8"></div>
+		  <div class="col-lg-4" style="text-align: center !important;">
+			<img class="" src="logob.png" style="max-width: 180px !important; margin-bottom: 30px !important;" alt="">
+			<h1 class="display-5" style=" color: #fff !important; font-weight: 700; text-align:center !important;" >👋 Hello World</h1>
+			<p style="color:#fff; font-size: 15px !important; margin-bottom: 10px !important; text-align:center !important;">Uma mensagem todas manhãs, às 7h e pouco, na caixa de entrada do seu e-mail noticias, dicas e novidades do universo nomade digital de um jeito leve, útil e moderno.</p>
+			 <h5 style="color: #fff !important; text-align: center !important;">Junte-se á +5.000 membros!</h5>
+			<form action="https://hook.integromat.com/2xe7b1gdaknger5t3sswywzmljk1geej" method="POST" style="color: #000 !important; text-align: center !important;">
+				<input type="text" placeholder="Qual seu primeiro nome?" name="nome" style="margin-bottom: 10px; height: 50px !important; width: 300px !important;"><br>
+				<input type="email" placeholder="Qual seu melhor e-mail?" name="email" style="margin-bottom: 10px; height: 50px !important; width: 300px !important;"><br>
+				<!--phone-->
+				<input type="hidden" id="redirect" name="phone_number[full]" value="" >
+				<input type="hidden" name="nationalMode" value="" >
+				<input id="phone" name="number" type="tel" required style="margin-bottom: 10px; width: 300px !important; height: 50px !important;"><br>
+				<button type="submit" style="background-color: #25D366 !important; margin-top: 10px !important; height: 50px !important; width: 300px !important;"><img src="whatsapp.png" style="max-width:20px !important; margin-right: 10px !important;" alt=""><b>EU QUERO, BORA!</b></button>
+				<p style="font-size: 9px !important; color: rgb(255, 255, 255); margin-top: 10px; text-align: center !important;">Ao inscrever-se você será adicionado(a) ao nosso grupo de transmição<br>do Whatsapp automaticamente e vai receber instruções para participar<br>de nossas iniciativas. Nós não fazemos spam.</p>
+			  </form>
+		</div>
+
+	  	</div>
+	</div>
+</div>
+
+
+
+
+<div class="col-lg-6 offset-lg-3">
+	<div style="background-color: #fff !important;">
+		<div class="" id="products-container" style="background-color: #fff !important; padding-top: 50px !important; padding-bottom: 50px !important;">
+			<!-- Loading indicator: this gets replaced when we have products -->
+			<div class="text-center p-5 m-5">
+				<div class="text-muted p-2">Aguarde um momento...</div>
+				<div class="spinner-border text-primary" role="status"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+	<div class="container">
+		<div class="row" id="footer">
+
+			<div class="col-lg-8 offset-lg-2">
+				<p class="text-center" style="font-size: 10px !important; color: rgb(0, 0, 0) !important; margin-bottom: 30px !important; padding-top: 50px !important;">Os produtos e serviços vendidos neste site não representam nenhum tipo de parceria ou vínculo com o Facebook, Instagram, Whatsapp ou qualquer um de seus produtos e aplicativos. E também não são uma promessa ou garantia de ganhos ou resultados futuros. Seu nível de sucesso em alcançar os resultados com uso dos produtos, informações, estratégias ou recomendações depende do tempo que você dedica aos estudos, do seu entendimento e interpretação das ideias apresentadas, das técnicas serem corretamente utilizadas, de suas finanças, de seus conhecimentos e habilidades específicas. Por isso não podemos garantir o seu sucesso ou nível de renda, não somos responsáveis por suas ações.</p>
+			</div>
+
+			<div class=" text-center p-3" style="color: rgb(0, 0, 0) !important; font-size: 11px !important;">Feito com ❤️ por<a href="https://nomadedigitalbrazil.com" style="color: rgb(0, 0, 0) !important; padding-bottom: 30px !important;"> Nomade Digital Brazil</a> | Todos os direitos reservados 2021.</div>
+		</div>
+	</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+<script src="build/js/intlTelInput.js"></script>
+<script>
+  var input = document.querySelector("#phone");
+  window.intlTelInput(input, {
+	// allowDropdown: false,
+	// autoHideDialCode: false,
+	//autoPlaceholder: "true",
+	// dropdownContainer: document.body,
+	// excludeCountries: ["us"],
+	// formatOnDisplay: false,
+	//geoIpLookup: function(callback) {
+	 //$.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+	// var countryCode = (resp && resp.country) ? resp.country : "";
+	//  callback(countryCode);
+	// });
+	//},
+	hiddenInput: "full_number",
+	initialCountry: "br",
+	// localizedCountries: { 'de': 'Deutschland' },
+	 nationalMode: true,
+	// onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+placeholderNumberType: "MOBILE",
+	// preferredCountries: ['cn', 'jp'],
+separateDialCode: true,
+	utilsScript: "build/js/utils.js",
+  });
+</script>
+
+
+</body>
+</html>
